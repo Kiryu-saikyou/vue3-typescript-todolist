@@ -1,0 +1,22 @@
+# 自动处理行结束符
+* text=auto
+
+# 确保文本文件使用LF
+*.js text eol=lf
+*.ts text eol=lf
+*.vue text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.d.ts text eol=lf
+
+# 二进制文件保持原样
+*.png binary
+*.jpg binary
+*.gif binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
