@@ -6,21 +6,21 @@
     <div class="image-grid">
       <img 
         :src="image1Url" 
-        alt="风景图片1" 
+        alt="1" 
         class="image-item"
-        @click="openLightbox(image1Url, '风景图片1')" 
+        @click="openLightbox(image1Url, '1')" 
       />
       <img 
         :src="image2Url" 
-        alt="风景图片2" 
+        alt="2" 
         class="image-item"
-        @click="openLightbox(image2Url, '风景图片2')" 
+        @click="openLightbox(image2Url, '2')" 
       />
       <img 
         :src="image3Url" 
-        alt="风景图片3" 
+        alt="3" 
         class="image-item"
-        @click="openLightbox(image3Url, '风景图片3')" 
+        @click="openLightbox(image3Url, '3')" 
       />
     </div>
     

@@ -21,11 +21,6 @@
         <li>解开潘多拉魔盒的秘密</li>
       </ul>
     </div>
-
-    <div class="test-screenshot">
-      <h3>自动化测试截图</h3>
-      <img src="@/assets/test-screenshot.png" alt="自动化测试截图" />
-    </div>
   </div>
 </template>
 
