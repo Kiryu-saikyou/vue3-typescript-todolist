@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-rou
 import Home from '../Home.vue';
 import About from '../About.vue';
 import Login from '../Login.vue';
+import ImagePage from '../ImagePage.vue'; // 导入新组件
 import { useUserStore } from '../stores/userStore';
 
 const routes: RouteRecordRaw[] = [
@@ -21,6 +22,12 @@ const routes: RouteRecordRaw[] = [
         path: '/login',
         name: 'Login',
         component: Login,
+    },
+    {
+        path: '/image-page',
+        name: 'ImagePage',
+        component: ImagePage, // 添加新路由
+        meta: { requiresAuth: true },
     },
 ];
 

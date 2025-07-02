@@ -3,6 +3,7 @@
     <nav class="navbar" v-if="userStore.isLoggedIn">
       <router-link to="/" data-testid="nav-home">首页</router-link>
       <router-link to="/about" data-testid="nav-about">个人简介</router-link>
+      <router-link to="/image-page" data-testid="nav-image-page">Vue自动化测试</router-link> <!-- 添加新链接 -->
       <div class="user-info">
         <span>{{ userStore.username }}，欢迎您！</span>
         <button @click="logout">退出登录</button>
@@ -14,15 +15,11 @@
 
 <script setup lang="ts">
 import { useUserStore } from './stores/userStore';
-import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
-const router = useRouter();
 
 const logout = () => {
   userStore.logout();
-  // 退出登录后导航到登录页面
-  router.push('/login');
 };
 </script>
 
