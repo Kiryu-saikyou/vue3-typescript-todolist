@@ -14,11 +14,15 @@
 
 <script setup lang="ts">
 import { useUserStore } from './stores/userStore';
+import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
+const router = useRouter();
 
 const logout = () => {
   userStore.logout();
+  // 退出登录后导航到登录页面
+  router.push('/login');
 };
 </script>
 

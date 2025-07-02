@@ -11,6 +11,11 @@
         </div>
         <div class="error-message" v-if="errorMessage">{{ errorMessage }}</div>
         <button @click="handleLogin">登录</button>
+        
+        <!-- 简化的账号信息展示 -->
+        <div class="account-info">
+            <p>用户名: <code>admin</code> | 密码: <code>123456</code></p>
+        </div>
     </div>
 </template>
 
@@ -29,7 +34,7 @@ const handleLogin = () => {
     const loginSuccess = userStore.login(username.value, password.value);
 
     if (loginSuccess) {
-        router.push('/'); // 登录成功后跳转到首页(待办事项)
+        router.push('/');
     } else {
         errorMessage.value = '用户名或密码错误';
     }
@@ -39,11 +44,10 @@ const handleLogin = () => {
 <style scoped>
 .login-container {
     max-width: 300px;
-    margin: 50px auto;
+    margin: auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border: none;
+    background-color: transparent;
 }
 
 .form-group {
@@ -80,5 +84,26 @@ button:hover {
     color: #f44336;
     margin: 10px 0;
     text-align: center;
+}
+
+/* 账号信息样式 */
+.account-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.account-info p {
+    margin: 0;
+    color: #555;
+}
+
+.account-info code {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: Consolas, monospace;
 }
 </style>
